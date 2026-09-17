@@ -31,8 +31,9 @@ $resultflo = mysqli_query($conn, $sqlflo);
 <body>
 
 <h1>แก้ไขข้อมูลห้อง</h1>
-
-<form action="save_room_data.php" method="post">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
+<form action="update_room_data.php" method="post">
 
     <input
         type="hidden"
@@ -76,7 +77,7 @@ $resultflo = mysqli_query($conn, $sqlflo);
     ชั้น
     <br>
 
-    <select name="floor_id">
+    <select name="floor_id" class="form-select">
             <?php while ($rowflo = mysqli_fetch_assoc($resultflo)) { ?>
                 <option value="<?= $rowflo['floor_id'] ?>" <?= ($row['floor_id'] == $rowflo['floor_id']) ? "selected" : "" ?>>
                     <?= $rowflo['floor_name'] ?>
@@ -85,14 +86,14 @@ $resultflo = mysqli_query($conn, $sqlflo);
     </select>
 
     <br><br>
-
     จำนวนที่นั่ง
     <br>
 
-    <input
+    <input 
         type="number"
         name="room_seats"
         value="<?= $row["room_seats"] ?>"
+        class="form-control"
     >
 
     <br><br>
@@ -100,7 +101,7 @@ $resultflo = mysqli_query($conn, $sqlflo);
     ประเภทห้อง
     <br>
 
-    <select name="room_type_id">
+    <select name="room_type_id" class="form-select">
             <?php while ($rowroomtype = mysqli_fetch_assoc($resultroomtype)) { ?>
                 <option value="<?= $rowroomtype['room_type_id'] ?>" <?= ($row['room_type_id'] == $rowroomtype['room_type_id']) ? "selected" : "" ?>>
                     <?= $rowroomtype['room_type_name'] ?>
@@ -113,27 +114,28 @@ $resultflo = mysqli_query($conn, $sqlflo);
     สถานะ
     <br>
 
-    <select name="room_type_status">
-        <option value="1" <?= (isset($row["room_type_status"]) && $row["room_type_status"] == 1) ? "selected" : "" ?>>
+    <select name="room_status" class="form-select">
+        <option value="1" <?= (isset($row["room_status"]) && $row["room_status"] == 1) ? "selected" : "" ?>>
             พร้อมใช้งาน
         </option>
-        <option value="0" <?= (isset($row["room_type_status"]) && $row["room_type_status"] == 0) ? "selected" : "" ?>>
+        <option value="0" <?= (isset($row["room_status"]) && $row["room_status"] == 0) ? "selected" : "" ?>>
             ไม่พร้อมใช้งาน
         </option>
     </select>
 
     <br><br>
 
-    <button type="submit">
-        บันทึกการแก้ไข
+    <button type="submit" class="btn btn-primary">
+        <i class="fas fa-save"></i> บันทึกการแก้ไข
     </button>
 
-    <a href="index.php">
-        ยกเลิก
+    <a href="index.php" class="btn btn-secondary">
+        <i class="fas fa-times"></i> ยกเลิก
     </a>
 
 </form>
 
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
 </html>

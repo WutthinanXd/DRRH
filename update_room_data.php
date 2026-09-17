@@ -24,7 +24,7 @@ $sql = "UPDATE tb_roomdata SET
 
 mysqli_query($conn, $sql);
 
-header("Location: room_list.php");
+header("Location: index1.php");
 
 exit;
 

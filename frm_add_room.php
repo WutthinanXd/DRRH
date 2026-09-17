@@ -13,6 +13,8 @@ $resultflo = mysqli_query($conn, $sqlflo);
     <meta charset="UTF-8">
 
     <title>เพิ่มข้อมูลห้อง</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
 
 </head>
 
@@ -20,12 +22,12 @@ $resultflo = mysqli_query($conn, $sqlflo);
 
     <h1>เพิ่มข้อมูลห้อง</h1>
 
-    <form action="save_room_data.php" method="post">
+    <form action="save_room_data.php" method="post" class="form-control">
 
         หมายเลขห้อง
         <br>
 
-        <input type="text" name="room_number" required>
+        <input type="text" name="room_number" required class="form-control">
 
         <br><br>
 
@@ -93,16 +95,17 @@ $resultflo = mysqli_query($conn, $sqlflo);
 
         <br><br>
 
-        <button type="submit">
+        <button type="submit" class="btn btn-primary">
             บันทึก
         </button>
 
-        <a href="room_list.php">
+        <a href="index.php" class="btn btn-secondary">
             ยกเลิก
         </a>
 
     </form>
 
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
 </html>

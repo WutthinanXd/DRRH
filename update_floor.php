@@ -10,6 +10,6 @@ $sql = "UPDATE tb_floors SET
 
 mysqli_query($conn, $sql);
 
-header("Location: frm_add_floor.php");
+header("Location: frm_add_floor1.php");
 exit;
 ?>

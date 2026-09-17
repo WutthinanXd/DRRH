@@ -16,6 +16,8 @@ $row = mysqli_fetch_assoc($result);
 <head>
     <meta charset="UTF-8">
     <title>แก้ไขข้อมูลชั้น</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
 </head>
 
 <body>
@@ -36,11 +38,16 @@ $row = mysqli_fetch_assoc($result);
 
     <br><br>
 
-    <button type="submit">บันทึกการแก้ไข</button>
-    <a href="frm_add_floor.php">ยกเลิก</a>
+    <button type="submit" class="btn btn-primary">
+        <i class="fas fa-save"></i> บันทึกการแก้ไข
+    </button>
+    <a href="frm_add_floor.php" class="btn btn-secondary">
+        <i class="fas fa-times"></i> ยกเลิก
+    </a>
 
 </form>
 
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
 </html>

@@ -12,6 +12,6 @@ $sql = "UPDATE tb_room_types SET
 
 mysqli_query($conn, $sql);
 
-header("Location: frm_add_room_type.php");
+header("Location: frm_add_room_type1.php");
 exit;
 ?>
