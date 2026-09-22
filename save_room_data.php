@@ -34,7 +34,7 @@ VALUES
 
 mysqli_query($conn, $sql);
 
-header("Location: index1.php");
+header("Location: index2.php");
 
 exit;
 

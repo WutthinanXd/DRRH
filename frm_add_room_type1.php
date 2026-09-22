@@ -195,7 +195,7 @@ function e($value)
                             data-bs-toggle="modal"
                             data-bs-target="#addRoomTypeModal"
                           >
-                            <i class="bi bi-person-plus-fill me-1" aria-hidden="true"> </i>
+                            <i class="bi bi-building-fill-add me-1" aria-hidden="true"> </i>
                             เพิ่มข้อมูลประเภทห้อง
                           </button>
                         </div>
